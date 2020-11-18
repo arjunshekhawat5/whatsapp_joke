@@ -6,6 +6,7 @@ with open('auth.txt', 'r') as txt:
     f = txt.read().split()
     acc_sid = f[0]
     token = f[1]
+    number = f[2]
 
 
 def joke():
@@ -24,7 +25,7 @@ def joke():
         message = client.messages.create(
             from_='whatsapp:+14155238886',
             body=text,
-            to='whatsapp:+918949266322'
+            to=f'whatsapp:{number}'
         )
 
 
